@@ -1,0 +1,68 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   width: 100%;
+   min-height: 100vh;
+
+   font-family: "Outfit";
+   background: hsl(212, 45%, 89%);
+}
+
+.card {
+   width: 20rem;
+   height: 30rem;
+
+   padding: 1rem;
+   border-radius: 1rem;
+
+   background: hsl(0, 0%, 100%);
+}
+
+.card__qr-code {
+   width: 100%;
+   border-radius: 1rem;
+}
+
+.card__content {
+   padding: 1.2rem;
+}
+
+.card__title {
+   font-size: 1.3rem;
+   font-weight: 700;
+   padding-bottom: 1rem;
+}
+
+.card__description {
+   color: hsl(220, 15%, 55%);
+   font-size: 0.95rem;
+   text-align: center;
+}
+
+footer { 
+   position: fixed;
+   bottom: 1rem;
+
+   font-size: 1rem; 
+   font-family: "Outfit"; 
+   font-weight: 700;
+   text-align: center; 
+}
+footer a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 600px) {
+   footer {
+      padding-top: 2rem;
+      position: static;
+
+   }
+}
