@@ -173,6 +173,10 @@ footer a { color: hsl(228, 45%, 44%); }
         width: 45%;
     }
 
+    .quotes {
+        background-position-x: 82%;
+    }
+
     .card__heading {
         font-size: 1.38rem;
     }
