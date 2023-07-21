@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-primary: hsl(257, 40%, 49%);
+    --clr-hover: hsl(300, 69%, 71%);
+}
+
+body {
+    color: var(--clr-white);
+    background: var(--clr-primary);
+    background-image: url('images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main {
+    padding: 13%;
+    padding-bottom: 0;
+}
+
+.logo {
+    width: 13rem;
+    margin-bottom: 5rem;
+}
+
+.illustration {
+    width: 100%;
+}
+
+.box {
+    text-align: center;
+}
+
+.box h1 {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.description {
+    font-family: "Open Sans";
+    font-size: 1.70rem;
+    padding: 2rem 0;
+}
+
+.box .btn {
+    color: var(--clr-primary);
+    font-family: "Open Sans";
+    font-size: 1.2rem;
+    background: var(--clr-white);
+
+    width: 65%;
+    padding: 1.2rem;
+    border: 0;
+    border-radius: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.50) 0px 5px 15px;
+}
+
+.box .btn:hover {
+    cursor: pointer;
+    color: var(--clr-white);
+    background: var(--clr-hover);
+}
+
+.socialmedia-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    padding: 4rem 0 2rem;
+}
+
+.socialmedia-icons .icon {
+    border-radius: 50%;
+    border: 2px solid var(--clr-white);
+    background: var(--clr-white);
+}
+
+.socialmedia-icons .icon:hover {
+    cursor: pointer;    
+    background: var(--clr-hover);
+    border: 2px solid var(--clr-hover);
+}
+
+.attribution {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.attribution a { color: var(--clr-hover); text-decoration: none}
+.attribution a:hover { text-decoration: underline;}
+
+    
+@media (max-width: 450px) {
+    .box h1 {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1.4rem;
+    }
+
+    .box .btn {
+        width: 90%;
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        width: 100%;
+        height: 100vh;
+        background-image: url('images/bg-desktop.svg');
+        background-size: cover;
+   }
+
+    main {
+        padding: 3rem 5rem;
+   }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+   }
+
+   .box {
+        text-align: start;
+        padding: 10% 4rem 2rem;
+   }
+
+   .box .description {
+        font-size: 1.15rem;
+   }
+
+   .box .btn {
+        width: 13rem;
+        padding: 1.1rem;
+   }
+
+   footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .attribution {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10%;
+        flex-basis: 80%;
+    }
+
+   .socialmedia-icons {
+        order: 1;
+        padding: 0 1rem 1rem;
+   }
+}
