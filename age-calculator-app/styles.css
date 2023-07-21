@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--font_text: "Poppins";
+
+	--color_error: hsl(0, 100%, 67%);
+	/*Desktop version*/
+
+	--big-card_width: 850px;
+	--big-card_height: 650px;
+
+	--big-input_width: 170px;
+	--big-input_height: 70px;
+
+	/*Tablet version*/
+
+	--medium-input_width:140px;
+	--medium-input_height:50px;
+
+	--medium-card_width: 750px;
+	--medium-card_height: 550px;
+
+	/*Mobile version*/
+	--mobile-card_width: 350px;
+	--mobile-card_height: 480px;
+
+	--mobile-input_width: 85px;
+	--mobile-input_height: 50px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100vh;
+
+	background: hsl(0, 0%, 94%);
+}
+
+.card {
+	width: var(--medium-card_width);
+	height: var(--medium-card_height);
+
+	border-radius: 5% 5% 30% 5%;
+
+	background: hsl(0, 0%, 100%);
+}
+
+.form {
+	display: flex;
+}
+
+.form__item {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	font-family: var(--font_text);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+
+	margin-bottom: 3px;
+
+	color: hsl(0, 1%, 44%);
+}
+
+input[type="text"] {
+	width: var(--medium-input_width);
+	height: var(--medium-input_height);
+
+	border: 1px solid hsl(0, 0%, 86%);
+	border-radius: 5%;
+
+	font-family: var(--font_text);
+}
+
+input:focus {
+	outline: none;
+}
+
+input:hover {
+	cursor: pointer;
+}
+
+::placeholder {
+	color: hsl(0, 1%, 44%);
+	
+	font-family: var(--font_text);
+}
+
+.divisory {
+	display: flex;
+}
+
+.divisory__line {
+	background-color: hsl(0, 0%, 86%);
+}
+
+button {
+	border: none;
+	border-radius: 50%;
+
+	background: hsl(259, 100%, 65%);
+}
+
+button:hover {
+	cursor: pointer;
+	background: hsl(0, 0%, 8%);
+}
+
+.result * {
+	font-family: var(--font_text);
+	font-style: italic;
+	font-weight: 800;
+}
+
+.result > p > span {
+	color: hsl(259, 100%, 65%);
+
+}
+/*begin - errors messages*/
+
+.error-message {
+	font-style: italic;
+	color: hsl(0, 100%, 67%);
+
+}
+/*end - errors messages*/
+
+footer { font-family: var(--font_text);font-size: 16px; text-align: center; }
+footer > a { color: hsl(228, 45%, 44%); }
+
+
+@media only screen and (min-width: 750px) {
+
+	body > * {
+		margin: 20px;
+	}
+
+
+	.container {
+		margin: 30px;
+	}
+
+	.form__item {
+		margin: 20px;
+	}
+
+
+	input[type="text"] {
+		padding: 15px;
+		font-size: 20px;
+	}
+
+	.divisory__line {
+		width: calc(var(--medium-card_width) - 150px);
+		height: 1px;
+
+		margin-top: 30px;
+		
+	}
+
+	button {
+		width: 80px;
+		height: 80px;
+	}
+
+	.result > p {
+		font-size: 80px;
+		margin: -15px 0 -40px 0px;
+	}
+
+
+	.result > p > span {
+		margin-right: -10px;
+	}
+
+	.error-message {
+		margin-top: 3px;
+		font-size: 12px;
+
+	}
+}
+
+
+@media only screen and (min-width: 850px) {
+
+	.card {
+		width: var(--big-card_width);
+		height: var(--big-card_height);
+	}
+
+	.container {
+		margin: 60px;
+	}
+
+	.form__item {
+		margin-right: 50px;
+	}
+
+	label {
+		letter-spacing: 2px;
+		margin-bottom: j5px;
+
+	}
+
+	input[type="text"] {
+		width: var(--big-input_width);
+		height: var(--big-input_height);
+
+		padding: 20px;
+		font-size: 32px;
+
+	}
+
+	.divisory__line {
+		width: calc(var(--big-card_width) - 200px);
+		height: 2px;
+	}
+
+	button {
+		width: 100px;
+		height: 100px;
+	}
+
+
+	.result > p {
+		font-size: 100px;
+		margin: -15px 0 -40px 0px;
+	}
+
+	/*begin - errors messages*/
+
+	.error-message {
+		margin-top: 5px;
+
+		font-size: 15px;
+	}
+
+	/*end - errors messages*/
+
+}
+
+@media only screen and (max-width: 750px) {
+
+	body > * {
+		margin: 5px;
+	}
+
+	.card {
+		width: var(--mobile-card_width);
+		height: var(--mobile-card_height);
+	
+	}
+
+	.container {
+		margin: 45px 25px 20px 25px;
+	}
+
+	.form__item {
+		margin-right: 20px;
+	}
+
+	label {
+		font-size:13px;
+	}
+
+	input[type="text"] {
+		width: var(--mobile-input_width);
+		height: var(--mobile-input_height);
+		padding: 10px;
+		font-size: 20px;
+		border-radius: 10%;
+	}
+
+
+	.divisory__line {
+
+		width: calc(var(--mobile-card_width) - 50px);
+		height: 2px;
+
+		margin-top: 50px;
+	} 
+
+	button {
+		width: 70px;
+		height: 70px;
+
+		margin-left: calc(var(--mobile-card_width) / 2 * -1 - 10px);
+		margin-top: 15px;
+	}
+
+	img {
+		width: 30px;
+		height: 30px;
+	}
+
+	.result {
+		margin-top: 50px;
+	}
+
+	.result > p {
+
+		margin-top: -20px;
+		font-size: 55px;
+	}
+
+	.error-message {
+		font-size: 12px;
+	}
+
+}	
