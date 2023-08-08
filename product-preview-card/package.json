@@ -1,0 +1,15 @@
+{
+  "name": "product-preview-card",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "tailwind": "npx tailwindcss -i ./tailwind.css -o ./styles.css --watch",
+    "start": "npm run dev & npm run tailwind"
+  },
+  "author": "Pythonic",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
