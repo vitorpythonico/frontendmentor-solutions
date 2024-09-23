@@ -1,0 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--white: hsl(0, 0%, 100%);
+	--contrast-color: hsl(75, 94%, 57%);
+	--primary-color: hsl(0, 0%, 20%);
+	--secundary-color: hsl(0, 0%, 12%);
+	--bg-color: hsl(0, 0%, 8%);
+}
+
+@font-face {
+	font-family: "Inter";
+	font-weight: 400;
+	src: url("assets/fonts/static/Inter-Regular.ttf");
+}
+
+@font-face { 
+  font-family: "Inter";
+  font-weight: 600;
+  src: url("assets/fonts/static/Inter-SemiBold.ttf");
+}
+
+@font-face { 
+  font-family: "Inter";
+  font-weight: 700;
+  src: url("assets/fonts/static/Inter-Bold.ttf");
+}
+
+body {
+	width:100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	background: var(--bg-color);
+	font-family: "Inter";
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem;
+	width: 20rem;
+	background: var(--secundary-color);
+	border-radius: 0.8rem;
+}
+
+.avatar {
+	width: 5rem;
+	border-radius: 50%;
+}
+
+.profile {
+	text-align: center;
+	padding: 1rem 0;
+}
+
+.profile > h1 {
+	font-weight: 600;
+	color: var(--white);
+	padding-bottom: 0.5rem;
+}
+
+.profile > p {
+	color: var(--contrast-color);
+	font-weight: 700;
+	font-size: 0.85rem;
+}
+
+.description {
+	color: var(--white);
+	font-size: 0.85rem;
+	padding-bottom: 1.5rem;
+}
+
+.social-links {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.social-links > a {
+	width:100%;
+	color: var(--white);
+	background: var(--primary-color);
+	text-align: center;
+	text-decoration: none;
+	font-weight: 600;
+	font-size:0.9rem;
+	padding: 1rem 0;
+	border-radius: 0.5rem;
+}
+
+.social-links > a:hover {
+	cursor: pointer;
+	color: var(--primary-color);
+	background: var(--contrast-color);
+}
+
+.attribution { font-size: 1rem	; text-align: center; color: var(--white)}
+.attribution a { color: hsl(228, 45%, 44%); }
