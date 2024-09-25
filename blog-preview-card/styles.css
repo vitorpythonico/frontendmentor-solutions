@@ -1,0 +1,117 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "Figtree";
+	font-weight: 500;
+	src: url("assets/fonts/static/Figtree-SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "Figtree";
+	font-weight: 800;
+	src: url("assets/fonts/static/Figtree-ExtraBold.ttf");
+}
+
+:root {
+	/* == COLORS == */
+	--brand-color: hsl(47, 88%, 63%);
+	--neutral-color: hsl(0, 0%, 100%);
+	--primary-color: hsl(0, 0%, 7%);
+	--secundary-color: hsl(0, 0%, 42%);
+
+	/* == FONTS == */
+	--main-font: "Figtree";
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	font-family: var(--main-font);
+	background: var(--brand-color);
+}
+
+
+main {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 0 1.5rem;
+}
+
+.article {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	max-width: 22rem;
+	padding: 1.5rem;
+	border: 0.075rem solid var(--primary-color);
+	border-radius: 1rem;
+	background: var(--neutral-color);
+	box-shadow: 0.5rem 0.5rem var(--primary-color);
+}
+
+.article__illustration > img {
+	width: 100%; /* como cortar só do lado e deixar do tamanho real no eixo-y? */
+	border-radius: 0.5rem;
+}
+
+.article__metadata, .article__title {
+	color: var(--primary-color);
+}
+
+.article__tag {
+	display: inline;
+	font-size: 0.8rem;
+	font-weight: 800;
+	padding: 0.4rem 0.8rem;
+	border-radius: 0.3rem;
+	background: var(--brand-color);
+}
+
+.article__data {
+	font-size: 0.8rem;
+	font-weight: 500;
+	margin-top: 1.2rem;
+}
+
+.article__title {
+	padding: 1rem 0;
+	font-size: 1.3rem;
+	font-weight: 800;
+}
+.article__title:hover {
+	cursor: pointer;
+	color: var(--brand-color);
+	transition-duration: 0.2s;
+}
+
+
+.article__description {
+	color: var(--secundary-color);
+	font-size: 0.86rem;
+	padding-bottom: 1.5rem;
+}
+
+.article__author {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.9rem;
+	font-weight: 800;
+}
+
+.article__avatar {
+	width: 10%;
+}
+
+footer { font-size: 1rem; text-align: center; }
+footer a { color: hsl(228, 45%, 44%); }
