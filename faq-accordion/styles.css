@@ -1,0 +1,135 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "Work Sans";
+	font-weight: 400;
+	src: url("./assets/fonts/static/WorkSans-Regular.ttf");
+}
+
+@font-face { 
+  font-family: "Work Sans";
+  font-weight: 600;
+  src: url("./assets/fonts/static/WorkSans-SemiBold.ttf");
+}
+
+@font-face { 
+  font-family: "Work Sans";
+  font-weight: 700;
+  src: url("./assets/fonts/static/WorkSans-Bold.ttf");
+}
+
+:root {
+	--primary-color: hsl(292, 42%, 14%);
+	--secundary-color:  hsl(292, 16%, 49%);
+	--bg-color: hsl(275, 100%, 97%);
+	--brand-color: hsl(281, 83%, 54%)
+}
+
+body {
+	width:100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--bg-color) url("assets/images/background-pattern-mobile.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	font-family: "Work Sans"
+}
+
+h1, summary {
+	color: var(--primary-color);
+}
+
+main{
+	padding: 0 1rem 0 1rem;
+}
+
+.card {
+	background: white;
+  padding: 1.5rem;
+	border-radius: 0.5rem;
+}
+
+h1 {
+	display: flex;
+	align-items: center;
+	font-size: 2.2rem;
+	font-weight: 700;
+}
+
+.star-icon {
+	width: 1.5rem;
+	margin-right: 1.5rem
+}
+
+details {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem 0;
+}
+
+details:nth-child(n+2) {
+	border-top: 0.125rem solid var(--bg-color);
+}
+
+details[open] {
+	transition-duration: 5000;
+}
+
+details[open] .plus-icon {
+	content: url("assets/images/icon-minus.svg");
+}
+
+summary {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 600;
+}
+
+summary * {
+	padding: 0 0 0 2rem;
+}
+
+summary:hover {
+	cursor: pointer;
+	color: var(--brand-color);
+}
+
+p {	
+	color: var(--secundary-color);
+	padding-top: 1rem;
+}
+
+.attribution { padding-top: 0.5rem; font-size: 1rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 500px) {
+	body {
+		background: var(--bg-color) url("assets/images/background-pattern-desktop.svg");
+		background-repeat: repeat-x;
+	}
+
+	main {
+		max-width: 35rem;
+	}
+
+	.card {
+		width:100%;
+		padding: 2rem;
+	}
+
+	h1 {
+		font-size: 3rem
+	}
+	.star-icon {
+		width: 2.2rem
+	}
+
+}
