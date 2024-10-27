@@ -1,0 +1,142 @@
+@use 'variables';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: variables.$rose-50;
+}
+
+.heading {
+	font-family: variables.$font-serif;
+}
+
+.recipe-card {
+	color: variables.$stone-600;
+	background: white;
+	font-family: variables.$font-sans;
+	margin: 0 auto;
+	max-width: 50rem;
+
+	img {
+		width: 100%;
+	}
+	
+	h1 {
+		@extend .heading;
+		color: variables.$stone-900;
+		font-size: 2rem;
+		padding-top: 2rem;
+		padding-bottom: 1rem;
+	}
+
+	span {
+		font-weight: 700;
+		color: variables.$stone-600;
+	}
+
+	ul, ol {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	li {
+		padding-left: 1rem;
+	}
+
+	&__content {
+		padding: variables.$padding-content;
+	}
+
+	&__preparation-time {
+		margin-top: 2rem;
+		padding: 1rem;
+		border-radius: 0.8rem;
+		background: variables.$rose-50;
+
+		h2 {
+			font-size: 1.2rem;
+			color: variables.$rose-800;
+		}
+
+		ul {
+			padding: 1rem 2rem;
+		}
+
+		ul ::marker {
+			color: variables.$rose-800;
+		}
+	}
+
+	&__section {
+		padding: 1.5rem 0;
+			
+		h2 {
+			@extend .heading;
+			color: variables.$brown-800;
+			font-size: 1.6rem;
+			margin-bottom: 1rem;
+		}
+
+		ul, ol {
+			padding: 0 1rem;
+		}
+
+		ul ::marker, ol ::marker {
+			color: variables.$brown-800;
+			font-weight: 700;
+		}
+
+		table {
+			margin: 1rem 0;
+			width: 100%;
+	    border-collapse: collapse; 
+
+			td {
+				padding: 1rem;
+			}
+
+			tr:nth-child(n+2) {
+				border-top: 1px solid variables.$stone-150;
+			}
+
+			span {
+				color: variables.$brown-800;
+			}
+		}
+	}
+
+	&__section:nth-last-child(n+2) {
+		border-bottom: 1px solid variables.$stone-150;
+	}
+
+}
+
+.attribution { color: variables.$stone-900; font-family: variables.$font-sans; font-size: 1rem; text-align: center; }
+.attribution p { padding-top: .5rem;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width: 768px) {
+		.recipe-card {
+			margin: 4rem 2rem;
+			padding: 2rem;
+			border-radius: 1rem;
+
+			img {
+				border-radius: 1rem;
+			}
+
+			&__content {
+				padding: 0;
+			}
+		}
+}

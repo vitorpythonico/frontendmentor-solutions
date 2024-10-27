@@ -1,0 +1,38 @@
+$stone-100: hsl(30, 54%, 90%);
+$stone-150: hsl(30, 18%, 87%);
+$stone-600: hsl(30, 10%, 34%);
+$stone-900: hsl(24, 5%, 18%);
+$brown-800: hsl(14, 45%, 36%);
+$rose-50: hsl(330, 100%, 98%);
+$rose-800: hsl(332, 51%, 32%);
+
+$font-sans: Outfit, sans-serif;
+$font-serif: "Young Serif";
+
+$padding-content: 0 1.9rem;
+
+@font-face {
+	font-family: Outfit;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/assets/fonts/outfit/Outfit-Regular.ttf');
+}
+@font-face {
+  font-family: Outfit;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/outfit/Outfit-SemiBold.ttf');
+}
+@font-face {
+  font-family: Outfit;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/outfit/Outfit-Bold.ttf');
+}
+
+@font-face {
+  font-family: "Young Serif";
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}

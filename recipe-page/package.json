@@ -1,0 +1,18 @@
+{
+  "name": "recipe-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+		"dev": "npx sass --watch ./styles/index.scss ./styles/index.css & vite",
+		"sass:build": "sass ./styles/index.scss ./styles/index.css",
+		"build": "npm run sass:build && vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.80.4",
+    "vite": "^5.4.10"
+  }
+}

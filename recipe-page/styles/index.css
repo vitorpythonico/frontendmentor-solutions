@@ -1,0 +1,153 @@
+@font-face {
+  font-family: Outfit;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/outfit/Outfit-Regular.ttf");
+}
+@font-face {
+  font-family: Outfit;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/outfit/Outfit-SemiBold.ttf");
+}
+@font-face {
+  font-family: Outfit;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/outfit/Outfit-Bold.ttf");
+}
+@font-face {
+  font-family: "Young Serif";
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(330, 100%, 98%);
+}
+
+.heading, .recipe-card__section h2, .recipe-card h1 {
+  font-family: "Young Serif";
+}
+
+.recipe-card {
+  color: hsl(30, 10%, 34%);
+  background: white;
+  font-family: Outfit, sans-serif;
+  margin: 0 auto;
+  max-width: 50rem;
+}
+.recipe-card img {
+  width: 100%;
+}
+.recipe-card h1 {
+  color: hsl(24, 5%, 18%);
+  font-size: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.recipe-card span {
+  font-weight: 700;
+  color: hsl(30, 10%, 34%);
+}
+.recipe-card ul, .recipe-card ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.recipe-card li {
+  padding-left: 1rem;
+}
+.recipe-card__content {
+  padding: 0 1.9rem;
+}
+.recipe-card__preparation-time {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  background: hsl(330, 100%, 98%);
+}
+.recipe-card__preparation-time h2 {
+  font-size: 1.2rem;
+  color: hsl(332, 51%, 32%);
+}
+.recipe-card__preparation-time ul {
+  padding: 1rem 2rem;
+}
+.recipe-card__preparation-time ul ::marker {
+  color: hsl(332, 51%, 32%);
+}
+.recipe-card__section {
+  padding: 1.5rem 0;
+}
+.recipe-card__section h2 {
+  color: hsl(14, 45%, 36%);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.recipe-card__section ul, .recipe-card__section ol {
+  padding: 0 1rem;
+}
+.recipe-card__section ul ::marker, .recipe-card__section ol ::marker {
+  color: hsl(14, 45%, 36%);
+  font-weight: 700;
+}
+.recipe-card__section table {
+  margin: 1rem 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+.recipe-card__section table td {
+  padding: 1rem;
+}
+.recipe-card__section table tr:nth-child(n+2) {
+  border-top: 1px solid hsl(30, 18%, 87%);
+}
+.recipe-card__section table span {
+  color: hsl(14, 45%, 36%);
+}
+.recipe-card__section:nth-last-child(n+2) {
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.attribution {
+  color: hsl(24, 5%, 18%);
+  font-family: Outfit, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.attribution p {
+  padding-top: 0.5rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 768px) {
+  .recipe-card {
+    margin: 4rem 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  .recipe-card img {
+    border-radius: 1rem;
+  }
+  .recipe-card__content {
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
